@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 def get_data(data_path):
     data_path = os.path.abspath(os.path.join(os.path.split(os.path.realpath(__file__))[0], data_path))
-    with open(data_path, 'r') as f:
+    with open(data_path, 'rb') as f:
         data = json.load(f)
     return data
 
